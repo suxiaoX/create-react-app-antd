@@ -105,4 +105,11 @@ exclude: [/\.js$/, /\.html$/, /\.less$/, /\.json$/], // 加入less匹配
       ],
     },
 ```
-11. 重启项目 yarn start，就能看到你的效果了，这样就完成了
+11. 修改package.json启动方式并重启项目 yarn start，就能看到你的效果了，这样就完成了
+```
+"scripts": {
+  "start": "node scripts/start.js",
+  "build": "node scripts/build.js",
+  "test": "react-app-rewired test --env=jsdom"
+},
+```
