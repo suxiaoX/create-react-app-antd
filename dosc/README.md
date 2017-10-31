@@ -42,9 +42,18 @@ yarn add babel-plugin-import --dev
       }
     },
 ```
-8.  然后移除前面在 src/App.css 里全量添加的 @import '~antd/dist/antd.css'; 样式代码，并且按下面的格式引入模块。在需要的地方引入 例如下面这样
+8.  然后移除前面在 src/App.css 里全量添加的 @import '~antd/dist/antd.css'; 样式代码，并且按下面的格式引入模块。在需要的地方引入 例如src/App.js下面这样
 ```
 import { Button } from 'antd';
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Button type="primary">Button</Button>
+      </div>
+    );
+  }
+}
 ```
 9.  我们需要引入 less-loader 来加载 less 样式  
 ```
@@ -95,4 +104,4 @@ exclude: [/\.js$/, /\.html$/, /\.less$/, /\.json$/], // 加入less匹配
       ],
     },
 ```
-11. 这样就完成了
+11. 重启项目 yarn start，就能看到你的效果了，这样就完成了
