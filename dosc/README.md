@@ -33,7 +33,8 @@ yarn add babel-plugin-import --dev
       loader: require.resolve('babel-loader'),
       options: {
     +   plugins: [
-    +     ['import', { libraryName: 'antd', style: 'css' }], // 'css' 需要修改为true,下面才能做样式修改，如果不修改样式就这样了。
+    +     ['import', { libraryName: 'antd', style: 'css' }], 
+          // 'css' 需要修改为true,下面才能做样式修改，如果不修改样式就这样了。
     +   ],
         // This is a feature of `babel-loader` for webpack (not Babel itself).
         // It enables caching results in ./node_modules/.cache/babel-loader/
